@@ -24,6 +24,11 @@ This agent solves this by combining:
 
 ---
 
+## 🎬 **Demo**
+
+[![Watch the demo]](assets/demo.mp4)
+---
+
 ## 🧠 **Project Structure**
 
 ```
@@ -68,11 +73,6 @@ The main idea is to follow a **3-stage decision pipeline**. Here's how it intell
 
 💡 Every conversation is stored per user (`sessions/`), and the tool can handle **partial inputs**, **follow-up recovery**, and **streamed responses**.
 
----
-
-## 🎬 **Demo**
-
-[![Watch the demo]](assets/demo.mp4)
 
 ---
 
