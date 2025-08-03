@@ -1,0 +1,14 @@
+This project was designed to serve as a fully offline, intelligent financial planning assistant capable of interacting with users through natural language. The key goal was to support multi-turn, personalized conversations while maintaining explainability and modularity.
+
+The core architectural decision was to adopt a **multi-stage agent pipeline** using LangChain’s composable tools and memory framework. I deliberately avoided a monolithic LLM approach and instead broke the agent’s responsibilities into three parts: an **intro LLM** for onboarding and intent detection, a **tool routing agent** for executing logic-heavy financial calculations, and an **output LLM** for generating final, personalized responses. This modularity gave me better control over reasoning stages and improved maintainability.
+
+I chose to use **local models via Ollama** to ensure privacy and cost-efficiency. I tested both `llama3:instruct` and `mistral:instruct` but settled on `llama3:instruct` for its stronger context retention and better alignment with system prompts. However, this came at the trade-off of higher latency (\~1.5 mins) per response, especially during output enhancement. To address this, I tuned the temperature and top\_p, and kept most prompts under 80 words unless needed.
+
+For memory, I implemented a **custom JSON-based message history** that saves per-user conversations persistently in a `sessions/` folder. This allowed users to resume chats, view past financial decisions, and retain context between interactions. One trade-off was the lack of long-term vectorized memory for semantic search, but this was acceptable given the focus on structured financial logic rather than open-ended discussion.
+
+A major challenge was input incompleteness. Users rarely provide all the necessary parameters for financial tools. To solve this, I added a **missing value detection module** using a lightweight LLM prompt (input\_llm) that either guesses values reasonably or elicits further user input. This allowed the system to function even with partial or noisy data, improving robustness.
+
+The Gradio-based UI supports streaming output, session switching, and sample navigation buttons. I ensured that each session had a backend UUID but displayed a friendly label. A separate persona summary card is shown to make financial reasoning traceable. One UI-related trade-off was the limitation of Gradio’s state and chatbot format, which I handled by using `type="messages"` and avoiding heavy component nesting.
+
+Overall, the system balances **modularity, user experience, and local deployment**. By separating responsibility across models and stages, the assistant can handle both casual conversation and precise financial queries. Future extensions could include web scraping for inflation rates, long-term investment projections, or adding a vector store for financial document grounding.
+
