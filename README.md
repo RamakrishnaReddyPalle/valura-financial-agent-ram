@@ -70,9 +70,9 @@ The main idea is to follow a **3-stage decision pipeline**. Here's how it intell
 
 ---
 
-## 🎬 **UI Demo Walkthrough**
+## 🎬 **Demo**
 
-> 📽️ [Demo Video — Walkthrough of Valura Agent UI](https://your-demo-link.com)
+[![Watch the demo](assets/demo_thumbnail.png)](assets/demo.mp4)
 
 ---
 
