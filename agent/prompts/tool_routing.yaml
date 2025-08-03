@@ -1,0 +1,31 @@
+# agent/prompts/tool_routing.yaml
+
+routes:
+  - intent: future_value
+    keywords: ["future value", "FV", "how much will I have", "investment growth"]
+    tool: future_value_tool
+
+  - intent: present_value
+    keywords: ["present value", "PV", "worth today", "discounted"]
+    tool: present_value_tool
+
+  - intent: rule_of_72
+    keywords: ["double", "rule of 72", "how long to double"]
+    tool: rule_of_72_tool
+
+  - intent: retire_age
+    keywords: ["retire", "retirement age", "when can I retire"]
+    tool: retirement_age_calculator_tool
+
+  - intent: explain
+    keywords: ["explain formula", "what is", "show steps"]
+    tool: explain_formula_tool
+
+  - intent: persona
+    keywords: ["set my info", "my details", "income", "savings"]
+    tool: set_persona_tool
+  
+  - intent: fallback
+    keywords: []
+    tool: respond_naturally_tool
+
