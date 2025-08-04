@@ -11,6 +11,16 @@ I built on a **multi-stage agentic system** using local LLMs via Ollama (`llama3
 - Execute **calculation tools**
 - Return **clear, human-readable financial advice**
 
+
+---
+
+## 🎬 **Demo**
+
+[![Watch the demo]](assets/demo.mp4)
+<p align="center">
+  <img src="assets/Screenshot%202025-08-03%20121937.png" style="width: 100%;">
+</p>
+
 ---
 
 ## 🚩 **Problem Statement**
@@ -22,11 +32,6 @@ This agent solves this by combining:
 - Financial calculators for concrete output
 - Multi-turn memory to track the user's goals over time
 
----
-
-## 🎬 **Demo**
-
-[![Watch the demo]](assets/demo.mp4)
 ---
 
 ## 🧠 **Project Structure**
