@@ -14,7 +14,7 @@ I built on a **multi-stage agentic system** using local LLMs via Ollama (`llama3
 
 ---
 
-## 🎬 **Demo**
+## **Demo**
 
 [![Watch the demo]](assets/demo.mp4)
 <p align="center">
@@ -23,7 +23,7 @@ I built on a **multi-stage agentic system** using local LLMs via Ollama (`llama3
 
 ---
 
-## 🚩 **Problem Statement**
+## **Problem Statement**
 
 Many people are unsure how to begin planning their finances, lack access to personalized tools, or don’t know how to translate abstract goals (like retiring at 50) into actionable strategies.
 
@@ -34,23 +34,23 @@ This agent solves this by combining:
 
 ---
 
-## 🧠 **Project Structure**
+## **Project Structure**
 
 ```
 
-valura\_agent/
+valura_agent/
 ├── agent/
 │   ├── builder.py                # Build LangChain agent with tools + memory
 │   ├── orchestrator.py          # Manages flow: intro → tool → output
 │   ├── llms.py                  # Defines all LLM models
 │   ├── tools/                   # Financial tools (FV, PV, Retirement, etc.)
 │   ├── memory/
-│   │   ├── json\_memory.py       # Session-wise message history
+│   │   ├── json_memory.py       # Session-wise message history
 │   │   ├── memory.py            # Persona extraction logic
-│   │   └── persona\_memory.py    # Unified Persona data model
+│   │   └── persona_memory.py    # Unified Persona data model
 │   └── prompts/                 # Contains system prompts for intro/output/missing values
 │
-├── inference\_pipeline/
+├── inference_pipeline/
 │   └── prediction.py            # Entry point for handling a single user message
 │
 ├── sessions/                    # Persistent conversation logs (per user)
@@ -64,7 +64,7 @@ valura\_agent/
 
 ---
 
-## ⚙️ **Agent Flow and Reasoning**
+## **Agent Flow and Reasoning**
 
 The main idea is to follow a **3-stage decision pipeline**. Here's how it intelligently responds across various user inputs:
 
@@ -81,7 +81,7 @@ The main idea is to follow a **3-stage decision pipeline**. Here's how it intell
 
 ---
 
-## 🛠️ **Setup Instructions**
+## **Setup Instructions**
 
 ### 1. Clone the Repository
 
@@ -129,7 +129,7 @@ Then open your browser at `http://localhost:7860` and start chatting with **Valu
 
 ---
 
-## 🧾 **Sample Questions**
+## **Sample Questions**
 
 Use any of these to test the assistant’s capabilities:
 
@@ -141,7 +141,7 @@ Use any of these to test the assistant’s capabilities:
 
 ---
 
-## 📦 **Tech Stack**
+## **Tech Stack**
 
 * **LangChain Agents & Tools**
 * **Ollama + llama3\:instruct**
@@ -151,7 +151,7 @@ Use any of these to test the assistant’s capabilities:
 
 ---
 
-## 🧠 **Author**
+## **Author**
 
 Ramakrishna Reddy Palle
 *B.Tech EE, IIT Bhubaneswar*
